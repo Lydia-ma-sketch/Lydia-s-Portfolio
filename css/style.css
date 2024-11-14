@@ -1,0 +1,42 @@
+body {
+  width: 60%;
+  margin: 0 auto;
+  font-family: roboto;
+}
+h1,
+h2 {
+  text-align: center;
+  opacity: 0.9;
+}
+h1 {
+  color: #1b75bb;
+}
+h2.main-page {
+  text-align: left;
+  text-decoration: underline;
+}
+h3 {
+  opacity: 0.9;
+}
+em {
+  color: #1b75bb;
+}
+strong {
+  font-weight: 300;
+  opacity: 0.9;
+}
+pre {
+  padding-left: 20px;
+  opacity: 0.9;
+  color: #4e79a7;
+}
+
+ul {
+  font-size: 17px;
+}
+li {
+  line-height: 1.5;
+}
+a:visited {
+  color: grey;
+}

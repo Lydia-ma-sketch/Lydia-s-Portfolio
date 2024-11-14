@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Lydia's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <h1>Google Data Analytics Capstone Project</h1>
-    <h2>Case study: World Bank's world development indicators</h2>
+    <h2 class="main-page">
+      Case study: World Bank's world development indicators
+    </h2>
     <h3>Business Task</h3>
     <p>
       A fictional non-governmental organization wants to start projects in
@@ -15,12 +24,14 @@
       development in order for them to start investing time and money in those
       areas. They are especially interested in development in health and
       education. <br /><br />As a junior data analyst, I have been tasked to
-      explore World Development Indicator data available on Big Query Public
+      explore World Development Indicator Data available on Big Query Public
       Data specific to Myanmar country and make recommendations based on
       analysis specifically in health and education sectors.
     </p>
     <h3>Data Source</h3>
-    <p>Data source is available at bigquery-public-data.world_bank_wdi.</p>
+    <p>
+      Data source is available at <em>bigquery-public-data.world_bank_wdi</em>.
+    </p>
     <img
     /*src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/150/287/original/WDI_screenshot.jpg?1731552632"*/
     src="WDI screenshot.jpg" alt="Dataset Info" />
@@ -28,17 +39,20 @@
 
     <p>The following data analytics tools are used for this project:</p>
     <ol>
-      <li>SQL to query data</li>
+      <li><strong>SQL</strong> to query data</li>
       <li>
-        Microsoft Excel for data cleaning, manipulation and initial analysis
+        <strong>Microsoft Excel</strong> for data cleaning, manipulation and
+        initial analysis
       </li>
-      <li>Tableau Public for data analysis and visualizations</li>
+      <li>
+        <strong>Tableau Public</strong> for data analysis and visualizations
+      </li>
     </ol>
 
     <h3>1. Querying data</h3>
     <p>
       SQL script below shows that the dataset contains development indicator
-      data of 265 countries.
+      data of <strong>265</strong> countries.
     </p>
 
     <pre>
@@ -46,7 +60,8 @@ SELECT DISTINCT country_name
 FROM `bigquery-public-data.world_bank_wdi.indicators_data`</pre
     >
     <p>
-      The following SQL code shows that data is available from 1960 to 2020.
+      The following SQL code shows that data is available from
+      <strong>1960 to 2020</strong>.
     </p>
     <pre>
 SELECT min(year),max(year)
@@ -65,12 +80,12 @@ WHERE country_name='Myanmar'
     >
     <h3>2. Cleaning and Manipulation of data</h3>
     <p>
-      Cleaning and manipulation of data is done in Microsoft Excel. There are
-      1310 unique development indicators for Myanmar.
-      <br /><br />The first step of cleaning and manipulation involves
-      separating each development indicator into the same category, filtering
-      them and copying them into different files and pivoting and transposing
-      data for easy analysis.
+      Cleaning and manipulation of data are done in
+      <strong>Microsoft Excel</strong>. There are 1310 unique development
+      indicators for Myanmar. <br /><br />The first step of cleaning and
+      manipulation involves separating each development indicator into the same
+      category, filtering them and copying them into different files and
+      pivoting and transposing data for easy analysis.
     </p>
     <h3>3. Analysis and Visualizations</h3>
     <p>
@@ -82,6 +97,7 @@ WHERE country_name='Myanmar'
         >published on Tableau Public</a
       >.
     </p>
+    <p>Please click on each cateogry to see visualizations.</p>
     <ul>
       <li><a href="population.html">Population and Poverty</a></li>
       <li><a href="education.html">Education</a></li>
@@ -118,20 +134,21 @@ WHERE country_name='Myanmar'
     </p>
     <h3>Recommendations</h3>
     <p>
-      It is recommended to invest more in female education since female makes up
-      the bigger population and they tend to persevere till tertiary education.
-      And it is also recommended to create more job opportunities for women
-      because right now, more male than female are in the labor market with
-      female unemployment being high. <br /><br />It will also be wise to invest
-      more in men healthcare since they seem to live shorter and male children
-      are more prone to stunting and wasting.
+      Therefore, it is recommended to invest more in female education since
+      female makes up the bigger population and they tend to persevere till
+      tertiary education. And it is also recommended to create more job
+      opportunities for women because right now, more male than female are in
+      the labor market with female unemployment being high. <br /><br />It will
+      also be wise to invest more in men healthcare since they seem to live
+      shorter and male children are more prone to stunting and wasting.
     </p>
     <h3>Deliverables for further exploration</h3>
     <p>
       Since non-communicable (lifestyle) diseases are on the rise, it will be
       necessary to collect more data on what types of lifestyle diseases are
-      prevalent and what lifestyle factors contribute to the diseases and
+      prevalent; what lifestyle factors contribute to the diseases, and then
       provide programs to alleviate such diseases.
     </p>
+    <hr />
   </body>
 </html>
