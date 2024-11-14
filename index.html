@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lydia's Portfolio</title>
+  </head>
+  <body>
+    <h1>Google Data Analytics Capstone Project</h1>
+    <h2>Case study: World Bank's world development indicators</h2>
+    <h3>Business Task</h3>
+    <p>
+      A fictional non-governmental organization wants to start projects in
+      Myanmar and they would like to know which areas are in need of more
+      development in order for them to start investing time and money in those
+      areas. They are especially interested in development in health and
+      education. <br /><br />As a junior data analyst, I have been tasked to
+      explore World Development Indicator data available on Big Query Public
+      Data specific to Myanmar country and make recommendations based on
+      analysis specifically in health and education sectors.
+    </p>
+    <h3>Data Source</h3>
+    <p>Data source is available at bigquery-public-data.world_bank_wdi.</p>
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/150/287/original/WDI_screenshot.jpg?1731552632"
+      alt="Dataset Info"
+    />
+    <h3>Tools used</h3>
+
+    <p>The following data analytics tools are used for this project:</p>
+    <ol>
+      <li>SQL to query data</li>
+      <li>
+        Microsoft Excel for data cleaning, manipulation and initial analysis
+      </li>
+      <li>Tableau Public for data analysis and visualizations</li>
+    </ol>
+
+    <h3>1. Querying data</h3>
+    <p>
+      SQL script below shows that the dataset contains development indicator
+      data of 265 countries.
+    </p>
+
+    <pre>
+SELECT DISTINCT country_name
+FROM `bigquery-public-data.world_bank_wdi.indicators_data`</pre
+    >
+    <p>
+      The following SQL code shows that data is available from 1960 to 2020.
+    </p>
+    <pre>
+SELECT min(year),max(year)
+FROM `bigquery-public-data.world_bank_wdi.indicators_data`
+</pre
+    >
+    <p>
+      The following SQL query is run in order to retrieve data specific to
+      Myanmar and saved the file in Excel format.
+    </p>
+    <pre>
+SELECT *
+FROM `bigquery-public-data.world_bank_wdi.indicators_data`
+WHERE country_name='Myanmar'
+</pre
+    >
+    <h3>2. Cleaning and Manipulation of data</h3>
+    <p>
+      Cleaning and manipulation of data is done in Microsoft Excel. There are
+      1310 unique development indicators for Myanmar.
+      <br /><br />The first step of cleaning and manipulation involves
+      separating each development indicator into the same category, filtering
+      them and copying them into different files and pivoting and transposing
+      data for easy analysis.
+    </p>
+    <h3>3. Analysis and Visualizations</h3>
+    <p>
+      Initial analysis was done in Excel and visualizations are done in Tableau
+      Public Desktop and published on Tableau Public.
+    </p>
+    <ul>
+      <li>Population and Poverty</li>
+      <li>Education</li>
+      <li>Health</li>
+      <li>Agriculture, Forestry and Fishery</li>
+      <li>Business Environment</li>
+      <li>Development Assistance</li>
+      <li>Economy</li>
+      <li>Electricity</li>
+      <li>Environment</li>
+      <li>Governance</li>
+      <li>Industry</li>
+      <li>Information and Communication Technology</li>
+      <li>Infrastructure</li>
+      <li>International Tourism</li>
+      <li>Labor and Social Protection</li>
+      <li>Science and Technology</li>
+      <li>Social – Gender Equality</li>
+      <li>Statistical Capacity and Performance</li>
+      <li>Trade</li>
+    </ul>
+    <h3>Summary</h3>
+    <p>
+      In terms of population, more female population than male population with
+      50% of urban population dwelling in slums. <br /><br />More males than
+      females go to basic education but more females than male attain tertiary
+      level education. <br /><br />Health-wise, generally, females live longer
+      than males. Stunting and wasting are very common in the country with more
+      males than females prone to them. <br /><br />Death from communicable
+      diseases are declining but death from lifestyle diseases such as cancer,
+      diabetes and heart diseases are increasing.
+    </p>
+    <h3>Recommendations</h3>
+    <p>
+      It is recommended to invest more in female education since female makes up
+      the bigger population and they tend to persevere till tertiary education.
+      And it is also recommended to create more job opportunities for women
+      because right now, more male than female are in the labor market with
+      female unemployment being high. <br /><br />It will also be wise to invest
+      more in men healthcare since they seem to live shorter and male children
+      are more prone to stunting and wasting.
+    </p>
+    <h3>Deliverables for further exploration</h3>
+    <p>
+      Since non-communicable (lifestyle) diseases are on the rise, it will be
+      necessary to collect more data on what types of lifestyle diseases are
+      prevalent and what lifestyle factors contribute to the diseases and
+      provide programs to alleviate such diseases.
+    </p>
+  </body>
+</html>
