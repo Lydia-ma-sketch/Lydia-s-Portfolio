@@ -18,17 +18,21 @@ h2.main-page {
 h3 {
   opacity: 0.9;
 }
-em {
+em.datasource {
   color: #1b75bb;
 }
 strong {
-  font-weight: 300;
+  font-weight: 350;
   opacity: 0.9;
+}
+strong.skills {
+  font-weight: bold;
 }
 pre {
   padding-left: 20px;
   opacity: 0.9;
-  color: #4e79a7;
+  color: #1b75bb;
+  //color: #4e79a7;
 }
 
 ul {
@@ -39,4 +43,9 @@ li {
 }
 a:visited {
   color: grey;
+}
+.viz-container {
+  padding: 10px;
+  border-radius: 10px;
+  border: black;
 }
