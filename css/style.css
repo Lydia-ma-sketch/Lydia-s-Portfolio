@@ -49,3 +49,6 @@ a:visited {
   border-radius: 10px;
   border: black;
 }
+p.email {
+  text-align: center;
+}
