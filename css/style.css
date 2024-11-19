@@ -51,4 +51,6 @@ a:visited {
 }
 p.email {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
